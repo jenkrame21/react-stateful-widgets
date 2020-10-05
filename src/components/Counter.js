@@ -27,7 +27,7 @@ STEP 2: -----> DONE
   What the value of 'color' should be instead is a ternary expression that goes like this:
   If count is even, then "royalblue", else "crimson".
 
-STEP 3:
+STEP 3: -----> DONE?
   We need to replace some hard-coded info in the JSX with expressions, interpolated inside curly brackets.
   Start by replacing the character "0" with {count}. The 'count' slice of state is the source of truth here.
   Then, replace the word "even" with a ternary: {if count is even number, then string "even", else string "odd"}.
@@ -53,7 +53,8 @@ export default function Counter() {
   const [count, setCount] = useState(0)
 
   const increment = () => {
-    /* STEP 4 */
+  /* STEP 4 */
+    setCount(count%2 + 1);
   };
   const decrement = () => {
     /* STEP 5 */
@@ -72,7 +73,7 @@ export default function Counter() {
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>
-        Number {count} is ? 'even' : 'odd' {/* STEP 3 */}
+        Number is {count%2 ? 'odd' : 'even' /* STEP 3 */}
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
@@ -82,8 +83,3 @@ export default function Counter() {
     </div>
   );
 }
-
-
-// We need to replace some hard-coded info in the JSX with expressions, interpolated inside curly brackets.
-// Start by replacing the character "0" with {count}. The 'count' slice of state is the source of truth here.
-// Then, replace the word "even" with a ternary: {if count is even number, then string "even", else string "odd"}.
