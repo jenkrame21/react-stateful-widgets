@@ -15,19 +15,19 @@ A naive developer might say 3 different slices:
 But a single slice of state is all that's needed here: the count!
 The other things can simply be _derived_ from the count itself.
 
-STEP 0: -----> DONE
+STEP 0:
   Start by studying the component below, and importing the state hook.
 
-STEP 1: -----> DONE
+STEP 1:
   Using the state hook, create a 'count', 'setCount' pair.
   The 'count' state should be initialized to the number zero.
 
-STEP 2: -----> DONE
+STEP 2:
   The 'style' object has the 'color' property hard-coded to "royalblue".
   What the value of 'color' should be instead is a ternary expression that goes like this:
   If count is even, then "royalblue", else "crimson".
 
-STEP 3: -----> DONE?
+STEP 3:
   We need to replace some hard-coded info in the JSX with expressions, interpolated inside curly brackets.
   Start by replacing the character "0" with {count}. The 'count' slice of state is the source of truth here.
   Then, replace the word "even" with a ternary: {if count is even number, then string "even", else string "odd"}.
