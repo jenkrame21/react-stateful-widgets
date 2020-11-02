@@ -19,7 +19,6 @@ This project includes a `src/components` folder containing several React compone
 ### Task 1: Project Set Up
 
 - [x] Create a forked copy of this project.
-- [x] Add your team lead as collaborator on Github.
 - [x] Clone your OWN fork of the repository using your terminal.
 - [x] CD into the project base directory.
 - [x] Download project dependencies by running `npm install`.
@@ -37,9 +36,9 @@ This project includes a `src/components` folder containing several React compone
 
 #### Steps
 
-- [ ] You will add functionality to all components inside inside `src/components`.
-- [ ] Work on the components **in the same order in which they display in Chrome** (to go from easiest challenge to hardest).
-- [ ] Each file includes a link to a video, and a set of instructions which can be summarized as:
+- [x] You will add functionality to all components inside inside `src/components`.
+- [x] Work on the components **in the same order in which they display in Chrome** (to go from easiest challenge to hardest).
+- [x] Each file includes a link to a video, and a set of instructions which can be summarized as:
   - Watch the video demoing the finished component, and think about how much state is needed.
   - Create the necessary slices of component state using the state hook.
   - Fix the JSX so it displays information derived from state, instead of hard-coded data.
@@ -51,7 +50,9 @@ After finishing your required elements, you can push your work further. These go
 
 #### Stretch Goal 1 (To-Do List)
 
-Create a `Todos.js` file inside `src/components`. Find a tutorial online on how to build a to-do list in React using component state (no Redux!), and implement it. We should be able to render a list of to-dos, and cross out (or remove) individual to-dos to mark them complete.
+- [x] Create a `Todos.js` file inside `src/components`.
+- [ ] Find a tutorial online on how to build a to-do list in React using component state (no Redux!), and implement it.
+- [ ] We should be able to render a list of to-dos, and cross out (or remove) individual to-dos to mark them complete.
 
 #### Stretch Goal 2 (Tic-Tac-Toe)
 
