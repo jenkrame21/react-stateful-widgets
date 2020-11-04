@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
+import TodoItems from './TodoItems';
+import './Todos.css'
 
 /* To Do List
     1. Add To Do
@@ -12,39 +14,57 @@ import React, { useState } from 'react';
     8. Button to toggle all on/off
 */
 
-function TodosForm(props) {
+class TodosList extends Component {
 
-    const [ input, setInput ] = useState('');
+    constructor(props){
+        super(props);
 
-    const handleChange = e => {
-        setInput(e.target.value);
+        this.state = {
+            items: []
+        };
+
+        this.addItem = this.addItem.bind(this);
     }
 
-    const handleSubmit = e => {
-        e.preventDefault();
+    addItem(event) {
+        if (this._inputElement.value !== ''){
+            var newItem = {
+                text: this._inputElement.value,
+                key: Date.now()
+            };
 
-        // props.onSubmit({
-        //     id: Math.floor(Math.random() * 10000),
-        //     text: input
-        // });
+            this.setState((prevState) => {
+                return {
+                    items: prevState.items.concat(newItem)
+                };
+            });
+        }
+    
+        this._inputElement.value = '';
 
-        setInput('')
-    };
+        console.log(this.state.items);
+        event.preventDefault();
+    }
 
-    return (
-        <div className='container' onSubmit={handleSubmit}>
-            <h2>To Do</h2>
-            <input 
-                type='text'
-                placeholder='Add a To Do...'
-                value={input}
-                name='text'
-                className='todo-input'
-                onChange={handleChange}
-            />
-            <button>Add to To Do List</button>
-        </div>
-    )
+    render() {
+        return (
+            <>
+                <div className='widget-todo container'>
+                    <div className='header'>
+                        <h2>To Do List</h2>
+                        <form onSubmit={this.addItem}>
+                            <input 
+                                ref={(a) => this._inputElement = a}
+                                placeholder='Enter task'
+                            />
+                            <button type='submit'>Add</button>
+                        </form>
+                    </div>
+                    <TodoItems entries={this.state.items} delete={this.deleteItem}/>
+                </div>
+            </>
+        );
+    }
 }
 
-export default TodosForm;
+export default TodosList;
