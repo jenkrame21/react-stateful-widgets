@@ -1,0 +1,42 @@
+.container .header input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid rgb(97, 100, 255);
+    width: 165px;
+}
+
+.container .header button {
+    font-size: 16px;
+    margin: 10px;
+    margin-right: 0px;
+    background-color: #0066FF;
+    color: #fff;
+    border: 2px solid #0066FF;
+}
+
+.container .header button:hover {
+    background-color: #003399;
+    border: 2px solid #003399;
+    cursor: pointer;
+}
+
+.container .theList li {
+    color: #fff;
+    background-color: rgba(58, 75, 170, 0.5);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    list-style: none;
+
+    transition: background-color .2s ease-out;
+}
+
+.container .theList li:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+ul.theList {
+    padding: 0;
+    width: 30%;
+}
